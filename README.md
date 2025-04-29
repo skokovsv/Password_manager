@@ -28,7 +28,7 @@
 
 **Запуск приложения**
 
-      python main.py
+        python main.py
 
 - При первом запуске программа предложит создать и подтвердить новый мастер-пароль.
 - При последующих запусках нужно ввести мастер-пароль для доступа к паролям.
@@ -37,10 +37,10 @@
 
 1. Установите PyInstaller:
    
-      pip install pyinstaller
+        pip install pyinstaller
 
 2. Соберите приложение:
-   
-    pyinstaller --onefile --windowed main.py
 
-3. Готовый .exe найдётся в папке dist/.
+        pyinstaller --onefile --windowed main.py
+
+4. Готовый .exe будет в папке dist/.
