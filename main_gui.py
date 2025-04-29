@@ -6,8 +6,7 @@ import base64
 import os
 from typing import Dict
 from cryptography.fernet import Fernet
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-from cryptography.hazmat.primitives import hashes
+from crypto_utils import derive_key
 
 # Папка для данных
 APP_DIR = os.path.join(os.path.expanduser("~"), ".password_manager")
@@ -19,15 +18,6 @@ VERIFY_KEY = "__verify__"
 # Параметры KDF
 KDF_ITERATIONS = 200_000
 
-
-def derive_key(master_password: str, salt: bytes) -> bytes:
-    kdf = PBKDF2HMAC(
-        algorithm=hashes.SHA256(),
-        length=32,
-        salt=salt,
-        iterations=KDF_ITERATIONS,
-    )
-    return base64.urlsafe_b64encode(kdf.derive(master_password.encode()))
 
 # Инициализация соли
 if not os.path.exists(SALT_FILE):
