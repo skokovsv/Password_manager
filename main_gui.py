@@ -1,4 +1,8 @@
 
+
+# ФАЙЛ С ПРИЛОЖЕНИЕМ
+# БЕЗ РАЗДЕЛЕНИЯ НА МОДУЛИ
+
 import tkinter as tk
 from tkinter import messagebox, simpledialog, ttk
 import json

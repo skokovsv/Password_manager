@@ -1,7 +1,6 @@
 
 
 
-
 import tkinter as tk
 from gui_components import ask_master, build_main_window
 
